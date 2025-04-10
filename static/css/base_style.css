@@ -276,3 +276,40 @@ textarea:invalid {
     transform: scale(1.05); /* Эффект увеличения */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Эффект наведения */
 }
+
+#faq-section {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+#faq-search {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: #007bff;
+}
+
+.faq-answer {
+    display: none;
+    padding-left: 15px;
+    color: #555;
+}

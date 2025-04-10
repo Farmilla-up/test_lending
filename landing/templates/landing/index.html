@@ -60,14 +60,34 @@
         <form id="contact-form" method="POST" action="{% url 'home' %}">
             {% csrf_token %}
             {{ form.as_p }}
-            {% if success %}
-                <p style="color: green; text-align : center;">Спасибо! Заявка отправлена.</p>
-            {%elif success == False %}
-                <p style="color: red; text-align : center;">Форма неправильно заполнена.</p>
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <p style="color: green; text-align: center;">{{ message }}</p>
+                    {% endfor %}
+                </ul>
             {% endif %}
             <button type="submit">Отправить</button>
         </form>
         <div id="response-message"></div>
+    </section>
+
+    <section id="faq-section">
+        <h2>Часто задаваемые вопросы</h2>
+        <input type="text" id="faq-search" placeholder="Поиск по вопросам...">
+
+        <div class="faq-item">
+            <div class="faq-question">Какие способы оплаты доступны?</div>
+            <div class="faq-answer">Мы принимаем Visa, MasterCard, и переводы на карту.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Сколько времени занимает выполнение заказа?</div>
+            <div class="faq-answer">В среднем — от 1 до 3 рабочих дней.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Можно ли вернуть деньги?</div>
+            <div class="faq-answer">Да, если работа не начата, возврат возможен.</div>
+        </div>
     </section>
 
     <footer>
@@ -81,5 +101,6 @@
         </div>
     </footer>
     <script src="{% static 'js/form.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
