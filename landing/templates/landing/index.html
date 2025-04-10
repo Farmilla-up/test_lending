@@ -15,6 +15,46 @@
         <a href="#contact-form" class="cta-button">Оставить заявку</a>
     </div>
     </section>
+
+    <section class="services">
+        <div class="service-item">
+            <i class="fa fa-cogs"></i> <!-- Иконка -->
+            <h3>Разработка сайтов</h3>
+            <p>Создаём быстрые и эффективные сайты для бизнеса.</p>
+        </div>
+        <div class="service-item">
+            <i class="fa fa-paint-brush"></i> <!-- Иконка -->
+            <h3>Дизайн</h3>
+            <p>Красивый и функциональный дизайн, ориентированный на пользователя.</p>
+        </div>
+        <div class="service-item">
+            <i class="fa fa-chart-line"></i> <!-- Иконка -->
+            <h3>SEO-оптимизация</h3>
+            <p>Мы поможем вашему сайту быть на первых позициях в поисковиках.</p>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="pricing-card">
+            <h3>Базовый пакет</h3>
+            <p>Идеален для небольших сайтов</p>
+            <p class="price">$99</p>
+            <button>Заказать</button>
+        </div>
+        <div class="pricing-card">
+            <h3>Продвинутый пакет</h3>
+            <p>Для более сложных проектов</p>
+            <p class="price">$199</p>
+            <button>Заказать</button>
+        </div>
+        <div class="pricing-card">
+            <h3>Премиум пакет</h3>
+            <p>Максимальный функционал и поддержка</p>
+            <p class="price">$299</p>
+            <button>Заказать</button>
+        </div>
+    </section>
+
      <section id="contact-form-section">
         <h2>Оставьте заявку</h2>
         <form id="contact-form" method="POST" action="{% url 'home' %}">
@@ -22,6 +62,8 @@
             {{ form.as_p }}
             {% if success %}
                 <p style="color: green; text-align : center;">Спасибо! Заявка отправлена.</p>
+            {%elif success == False %}
+                <p style="color: red; text-align : center;">Форма неправильно заполнена.</p>
             {% endif %}
             <button type="submit">Отправить</button>
         </form>
@@ -38,6 +80,6 @@
             </div>
         </div>
     </footer>
-
+    <script src="{% static 'js/form.js' %}"></script>
 </body>
 </html>

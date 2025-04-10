@@ -16,8 +16,8 @@ class ContactForm(forms.ModelForm):
             raise ValidationError('Имя не должно начинаться с цифры')
         return name
 
-    def clean_message(self):
+    def clean_message_more(self):
         message = self.cleaned_data['message']
-        if len(message) < 20 or len(message) > 200:
-            raise ValidationError('Сообщение должно содержать от 20 до 200 символов')
+        if len(message) > 500:
+            raise ValidationError('Сообщение должно содержать до 500 символов')
         return message

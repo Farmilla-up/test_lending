@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 h1{
     color : black;
     font-family: "Droid Sans Mono Dotted", sans-serif;
@@ -160,4 +164,115 @@ footer {
     text-align: center;
     margin-top: 20px;
     font-size: 1.2rem;
+}
+
+
+.errorlist {
+    color: red;
+    margin: 5px 0;
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+}
+
+
+.errorlist + input,
+.errorlist + textarea,
+input:invalid,
+textarea:invalid {
+    border: 2px solid red;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.service-item {
+    text-align: center;
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item i {
+    font-size: 40px;
+    color: #333;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Эффект увеличения */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Эффект наведения */
+    color : #ff6600;
+}
+
+
+.pricing {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+.pricing-card {
+    width: 30%;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.pricing-card p {
+    font-size: 1rem;
+    color: #777;
+    margin: 20px 0;
+}
+
+.pricing-card .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.pricing-card button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pricing-card button:hover {
+    background-color: #c0392b;
+}
+
+.pricing-card:hover {
+    transform: scale(1.05); /* Эффект увеличения */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Эффект наведения */
 }

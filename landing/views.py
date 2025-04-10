@@ -6,18 +6,24 @@ from .models import BaseModel
 
 # Create your views here.
 def index(request):
-    form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            BaseModel.objects.create(**form.cleaned_data)
-            return render(request, 'landing/index.html', {'form' : ContactForm, 'success' : True})
-        else :
-            return render(request, 'landing/index.html', {'form' : form} )
+            form.save()
+            return render(request, 'landing/index.html', {
+                'form': ContactForm(),
+                'success': True
+            })
+        else:
 
-    else :
+            return render(request, 'landing/index.html', {
+                'form': form,
+                'success': False
+            })
+    else:
+
         form = ContactForm()
-    return render(request, 'landing/index.html', {'form' : form })
+        return render(request, 'landing/index.html', {'form': form})
 
 
 # def add_post(request):
