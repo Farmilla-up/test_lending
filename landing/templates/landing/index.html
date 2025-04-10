@@ -15,6 +15,18 @@
         <a href="#contact-form" class="cta-button">Оставить заявку</a>
     </div>
     </section>
+     <section id="contact-form-section">
+        <h2>Оставьте заявку</h2>
+        <form id="contact-form" method="POST" action="{% url 'home' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if success %}
+                <p style="color: green; text-align : center;">Спасибо! Заявка отправлена.</p>
+            {% endif %}
+            <button type="submit">Отправить</button>
+        </form>
+        <div id="response-message"></div>
+    </section>
 
     <footer>
         <div class="footer-content">

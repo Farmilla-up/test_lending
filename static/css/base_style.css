@@ -55,12 +55,13 @@ footer {
     text-align: center;
     width: 100%;
     margin: 0;
+    height : 10%;
     box-sizing: border-box; /* Добавил это свойство */
     display: flex; /* Добавил flex */
     flex-direction: column; /* Колоночное расположение */
     justify-content: center; /* Вертикальное выравнивание */
     align-items: center; /* Горизонтальное выравнивание */
-    height : 10%;
+
 }
 .footer-content {
     width: 100%; /* Занимает всю ширину */
@@ -90,4 +91,73 @@ footer {
 
 .social-links a:hover {
     color: #ff6600;
+}
+
+
+
+#contact-form-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #ff6600;
+    outline: none;
+}
+
+#contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Стили кнопки отправки */
+#contact-form button {
+    padding: 12px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#contact-form button:hover {
+    background-color: #e65c00;
+}
+
+#response-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
 }
