@@ -25,7 +25,7 @@ html, body {
     align-items: center;
     color: white;
     text-align: center;
-    overflow: hidden; /* Скрываем все, что выходит за пределы экрана */
+    overflow: hidden;
 }
 
 .hero-content h1,
@@ -70,7 +70,7 @@ html, body {
 
 }
 
-/* Эффект наведения на кнопку */
+
 .cta-button:hover {
     background-color: #e65c00;
 }
@@ -84,16 +84,16 @@ footer {
     width: 100%;
     margin: 0;
     height : 10%;
-    box-sizing: border-box; /* Добавил это свойство */
-    display: flex; /* Добавил flex */
-    flex-direction: column; /* Колоночное расположение */
-    justify-content: center; /* Вертикальное выравнивание */
-    align-items: center; /* Горизонтальное выравнивание */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 .footer-content {
-    width: 100%; /* Занимает всю ширину */
-    margin: 0 auto; /* Центрирование */
+    width: 100%;
+    margin: 0 auto;
 }
 
 .footer-content p {
@@ -102,10 +102,10 @@ footer {
 }
 
 .social-links {
-    margin: 10px 0; /* Унифицировал отступы */
-    display: flex; /* Flex для ссылок */
-    justify-content: center; /* Центрирование по горизонтали */
-    flex-wrap: wrap; /* Если ссылок много - перенос на новую строку */
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .social-links a {
@@ -114,7 +114,7 @@ footer {
     margin: 0 15px;
     font-size: 1.2rem;
     transition: color 0.3s ease;
-    display: inline-block; /* Для правильного выравнивания */
+    display: inline-block;
 }
 
 .social-links a:hover {
@@ -241,8 +241,8 @@ textarea:invalid {
 }
 
 .service-item:hover {
-    transform: scale(1.05); /* Эффект увеличения */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Эффект наведения */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     color : #ff6600;
 }
 
@@ -297,8 +297,8 @@ textarea:invalid {
 }
 
 .pricing-card:hover {
-    transform: scale(1.05); /* Эффект увеличения */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Эффект наведения */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 #faq-section {
