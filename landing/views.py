@@ -24,13 +24,3 @@ def index(request):
         return render(request, 'landing/index.html', {'form': form})
 
 
-# def add_post(request):
-#     if request.method == 'POST':
-#         form = PostForm(request.POST)
-#         if form.is_valid() :
-#             # just_created = FirstApp.objects.create(**form.cleaned_data)
-#             just_created = form.save()
-#             return redirect(just_created)
-#     else :
-#         form = PostForm()
-#         return render(request, 'news/add_post.html', {'form' : form})
