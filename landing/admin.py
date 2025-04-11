@@ -10,3 +10,4 @@ class LandingAdmin(admin.ModelAdmin):
 
 
 admin.site.register(BaseModel, LandingAdmin)
+admin.site.site_header = 'Админка'

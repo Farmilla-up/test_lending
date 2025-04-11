@@ -18,6 +18,6 @@ class ContactForm(forms.ModelForm):
 
     def clean_message_more(self):
         message = self.cleaned_data['message']
-        if len(message) > 500:
+        if len(message) > 2000:
             raise ValidationError('Сообщение должно содержать до 500 символов')
         return message

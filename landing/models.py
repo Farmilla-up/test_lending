@@ -6,12 +6,13 @@ from django.db import models
 class BaseModel(models.Model):
     name = models.CharField(max_length= 20, verbose_name = 'Имя')
     email = models.EmailField(verbose_name = 'Email')
-    message = models.TextField(max_length= 500, verbose_name= 'Текст')
+    message = models.TextField(max_length= 2000, verbose_name= 'Текст')
     created_at = models.DateTimeField(auto_now_add= True , verbose_name='Отправлено')
 
     class Meta :
         ordering = ['-created_at']
-
+        verbose_name = 'Заявка'
+        verbose_name_plural = 'Заявки'
 
     def __str__(self):
         return f'{self.name} - {self.email} '
